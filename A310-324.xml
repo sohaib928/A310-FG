@@ -11,6 +11,8 @@
     <description> Models a A310-324. </description>
   </fileheader>
 
+<!-- Just some quick fixes by Jabberwocky to make it easier flyable, in the hope, it will be merged at some point with Toryx' main development line. -->
+
   <!--
   File:     A310-324.xml
   Inputs:
@@ -67,21 +69,33 @@
     <ixx unit="SLUG*FT2">   1996912 </ixx>
     <iyy unit="SLUG*FT2">   4878042 </iyy>
     <izz unit="SLUG*FT2">   6953101 </izz>
-    <emptywt unit="LBS" >    198450 </emptywt>
+    <emptywt unit="LBS" >    183300 </emptywt>	<!-- according to wiki -->
     <location name="CG" unit="IN">
       <x> 890.99 </x>
       <y>   0.00 </y>
       <z> -44.42 </z>
     </location>
+
+    <pointmass name="Cockpit Crew">
+      <description>Cockpit Crew</description>
+      <weight unit="LBS">  400.00 </weight>	<!-- two peeps of 200 lbs each -->
+      <location name="POINTMASS" unit="IN">
+	<x>  40.99 </x>
+	<y>   0.00 </y>
+	<z> -44.42 </z>
+      </location>
+    </pointmass> 
+
     <pointmass name="Payload">
-      <description> 40682 LBS + full (91618 LBS) fuel should bring model up to entered max weight</description>
-      <weight unit="LBS">  20341.1 </weight>
+      <description>Payload+Fuel leads to weight above MTOW to make the fuel-load trade as with all Airbuses</description>
+      <weight unit="LBS">  0.00 </weight>
       <location name="POINTMASS" unit="IN">
 	<x> 890.99 </x>
 	<y>   0.00 </y>
 	<z> -44.42 </z>
       </location>
     </pointmass> 
+
   </mass_balance>
 
   <ground_reactions>
@@ -494,10 +508,16 @@
           <table>
             <independentVar lookup="row">aero/alpha-rad</independentVar>
             <tableData>
+<!-- original aeromatic lift values are usually too low
 	      -0.20 -0.680
 	      0.00  0.200
 	      0.23  1.200
 	      0.60  0.600
+-->
+	      -0.20 -0.780
+	      0.00  0.300
+	      0.23  1.300
+	      0.60  0.700
             </tableData>
           </table>
 	</product>
@@ -509,7 +529,7 @@
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
           <property>fcs/flap-pos-deg</property>
-          <value> 0.03500 </value>
+          <value> 0.03500 </value> 
 	</product>
       </function>
 
@@ -529,7 +549,7 @@
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
           <property>fcs/elevator-pos-rad</property>
-          <value>0.2</value>
+          <value>0.25</value> <!-- elevator lift from 0.20 to 0.25 to get a better pitch control -->
 	</product>
       </function>
 
@@ -588,7 +608,7 @@
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
           <property>fcs/flap-pos-deg</property>
-          <value> 0.00197 </value>
+          <value> 0.00200 </value> <!-- orig 0.00197 -->
         </product>
       </function>
 
