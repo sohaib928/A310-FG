@@ -5,6 +5,8 @@ Toryx 2014
 Distributed under the terms of the GNU General Public Livense v2
 Flightdeck: Pierre Duval
 Sounds: Taken from A300, modified by Airbus330
+
+Just some quick fixes by Jabberwocky to make it easier flyable, in the hope, it will be merged at some point with Toryx' main development line.
 -->
 
 <PropertyList>
@@ -41,10 +43,31 @@ Sounds: Taken from A300, modified by Airbus330
 
   <model>
     <path>Aircraft/A310/Models/A310-324.xml</path>
+
+			<!-- prep to install a pushback -->
+			<!-- JPack: push forces for Voodoomaster Pushback -->
+			<pushback>
+				<kp type="double">800</kp>
+				<ki type="double">0</ki>
+				<kd type="double">0</kd>
+				<position-norm type="double">0</position-norm>
+				<enabled type="bool">false</enabled>
+			</pushback>
+
     <livery>
       <file type="string"/>
     </livery>
   </model>
+
+		<!-- preset for the changed AP window -->
+		<gui>
+			<dialogs>
+				<autopilot>
+					<kts-select type="bool">true</kts-select>
+					<mach-select tpye="bool">false</mach-select>
+				</autopilot>
+			</dialogs>
+		</gui>
 
   <sound>
     <path>Aircraft/A310/Sounds/A310-sound.xml</path>
@@ -67,6 +90,21 @@ Sounds: Taken from A300, modified by Airbus330
   
   <menubar>
     <default>
+				<!-- autopilot dialog, copied from Voodoomaster in JPack -->
+				<menu n="3">
+					<item>
+						<name>autopilot</name>
+						<label>Autopilot Settings</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+								var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", 
+											"Aircraft/A310/Dialogs/autopilot8.xml");
+								autopilot.open();
+							</script>
+						</binding>
+					</item>
+				</menu>
       <menu n="100">
 	<label>Airbus A310</label>
 	<enabled type="bool">true</enabled>
@@ -80,7 +118,48 @@ Sounds: Taken from A300, modified by Airbus330
       </menu>
     </default>
   </menubar>
+
+		<!-- Systems -->
+		<systems>
+			<autopilot>
+				<path>Aircraft/A310/Systems/SYS8_0_autopilot.xml</path>
+			</autopilot>
+		</systems>
 </sim>
+
+	<!-- Payload section: Whatever weights -->
+	<payload>
+
+		<weight n="0">
+			<name>Crew</name>
+			<!-- pilot + copilot -->
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]" />
+			<min-lb type="double">  200</min-lb>
+			<max-lb type="double">  400</max-lb>
+		</weight>
+
+		<weight n="1">
+			<!-- payload -->
+			<name>Lower Deck Aft Cargo</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]" />
+			<min-lb type="double">    0</min-lb>
+			<max-lb type="double">32793</max-lb>
+		</weight>
+
+	</payload>
+
+	<input>
+		<keyboard>
+			<key n="127">
+				<name>Delete</name>
+				<desc>Toggle Reversers</desc>
+				<binding>
+					<command>nasal</command>
+					<script>reversethrust.togglereverser();</script>
+				</binding>
+			</key>
+		</keyboard>
+	</input>
 
 <engines>
   <engine n="0">
@@ -95,10 +174,31 @@ Sounds: Taken from A300, modified by Airbus330
   </engine>
 </engines>	
 
+	<!-- some initialization for the operation of the SYS8 autopilot. Set in speed mode knots, set bqnk angle limeter to 35 deg, set the pitch limiters to inital values -->
+	<autopilot>
+
+		<settings>
+			<kts-mach-select type="string">kts</kts-mach-select>
+			<max-pitch type="float"> 6.0</max-pitch>
+			<min-pitch type="float">-4.0</min-pitch>
+			<bank-angle-limit-deg type="int">35</bank-angle-limit-deg>
+		</settings>
+
+		<internal>
+			<target-pitch-deg type="float">0.00</target-pitch-deg>
+			<max-pitch type="float"> 6.0</max-pitch>
+			<min-pitch type="float">-4.0</min-pitch>
+		</internal>
+
+	</autopilot>
+
 <nasal>
   <A310> 
     <file>Aircraft/A310/Nasal/liveries.nas</file>
   </A310>
+		<reversethrust>
+			<file>Aircraft/A310/Nasal/reverse-thrust.nas</file>
+		</reversethrust>
 </nasal> 
 
 </PropertyList>

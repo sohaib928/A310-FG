@@ -14,7 +14,7 @@ injected?       no
 <turbine_engine name="PW-4156A">
 <milthrust> 48000.0 </milthrust>
 <bypassratio>     1.0 </bypassratio>
-<tsfc>            0.8 </tsfc>
+<tsfc>            0.6 </tsfc>	<!-- changed to 0.6 from 0.8 according to P&W spec sheet -->
 <bleed>           0.03</bleed>
 <idlen1>         30.0 </idlen1>
 <idlen2>         60.0 </idlen2>
