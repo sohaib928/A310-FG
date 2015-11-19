@@ -26,7 +26,7 @@ Sounds: Taken from A300, modified by Airbus330
   <engine>GE-CF6-80C2</engine>
   
   <startup>
-    <splash-texture>Aircraft/A310/Splashs/splash-308.png</splash-texture>
+    <splash-texture>Splashs/splash-308.png</splash-texture>
     <splash-title>Airbus A310-308 v0.13</splash-title>
   </startup>
 
