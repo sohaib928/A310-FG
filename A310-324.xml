@@ -48,8 +48,8 @@
     <htailarm  unit="FT" >   73.82 </htailarm>
     <vtailarea unit="FT2">  486.58 </vtailarea>
     <vtailarm  unit="FT" >   66.28 </vtailarm>
-    <location name="AERORP" unit="IN">
-      <x> 890.99 </x>
+    <location name="AERORP" unit="M">
+      <x>   0.00 </x>
       <y>   0.00 </y>
       <z>   0.00 </z>
     </location>
@@ -58,10 +58,10 @@
       <y> -30.00 </y>
       <z>  70.00 </z>
     </location>
-    <location name="VRP" unit="IN">
+    <location name="VRP" unit="M">
       <x>0</x>
       <y>0</y>
-      <z>0</z>
+      <z>1.5</z>
     </location>
   </metrics>
 
@@ -70,29 +70,29 @@
     <iyy unit="SLUG*FT2">   4878042 </iyy>
     <izz unit="SLUG*FT2">   6953101 </izz>
     <emptywt unit="LBS" >    183300 </emptywt>	<!-- according to wiki -->
-    <location name="CG" unit="IN">
-      <x> 890.99 </x>
+    <location name="CG" unit="M">
+      <x>   0.50 </x>
       <y>   0.00 </y>
-      <z> -44.42 </z>
+      <z>  -1.42 </z>
     </location>
 
     <pointmass name="Cockpit Crew">
       <description>Cockpit Crew</description>
       <weight unit="LBS">  400.00 </weight>	<!-- two peeps of 200 lbs each -->
-      <location name="POINTMASS" unit="IN">
-	<x>  40.99 </x>
-	<y>   0.00 </y>
-	<z> -44.42 </z>
+      <location name="POINTMASS" unit="M">
+	<x> -13.6624 </x>
+	<y>   0.0000 </y>
+	<z>   2.0000</z>
       </location>
     </pointmass> 
 
     <pointmass name="Payload">
       <description>Payload+Fuel leads to weight above MTOW to make the fuel-load trade as with all Airbuses</description>
       <weight unit="LBS">  0.00 </weight>
-      <location name="POINTMASS" unit="IN">
-	<x> 890.99 </x>
+      <location name="POINTMASS" unit="M">
+	<x>   0.00 </x>
 	<y>   0.00 </y>
-	<z> -44.42 </z>
+	<z>  -1.00 </z>
       </location>
     </pointmass> 
 
@@ -101,10 +101,13 @@
   <ground_reactions>
 
     <contact type="BOGEY" name="NOSE">
-      <location unit="IN">
-	<x> 230.99 </x>
+      <location unit="M">
+	<x> -13.6624 </x>
 	<y>   0.00 </y>
-	<z> -213.22 </z>
+	<z>  -3.8210 </z>
+	<!-- x> 230.99 </x>
+	<y>   0.00 </y>
+	<z> -213.22 </z -->
       </location>
       <static_friction>  0.80 </static_friction>
       <dynamic_friction> 0.50 </dynamic_friction>
@@ -117,10 +120,13 @@
     </contact>
 
     <contact type="BOGEY" name="LEFT_MAIN">
-      <location unit="IN">
-	<x> 926.63 </x>
+      <location unit="M">
+	<x>  0.7644 </x>
+	<y> -4.2685 </y>
+	<z> -3.8905 </z>
+	<!-- x> 926.63 </x>
 	<y> -155.52 </y>
-	<z> -213.22 </z>
+	<z> -213.22 </z -->
       </location>
       <static_friction>  0.80 </static_friction>
       <dynamic_friction> 0.50 </dynamic_friction>
@@ -133,10 +139,13 @@
     </contact>
 
     <contact type="BOGEY" name="RIGHT_MAIN">
-      <location unit="IN">
-	<x> 926.63 </x>
-	<y> 155.52 </y>
-	<z> -213.22 </z>
+      <location unit="M">
+	<x>  0.7644 </x>
+	<y>  4.2685 </y>
+	<z> -3.8905 </z>
+	<!-- x> 926.63 </x>
+	<y> -155.52 </y>
+	<z> -213.22 </z -->
       </location>
       <static_friction>  0.80 </static_friction>
       <dynamic_friction> 0.50 </dynamic_friction>
@@ -148,7 +157,7 @@
       <retractable>1</retractable>
     </contact>
 
-    <contact type="STRUCTURE" name="LEFT_WING">
+    <!-- contact type="STRUCTURE" name="LEFT_WING">
       <location unit="IN">
 	<x> 890.99 </x>
 	<y> -72.00 </y>
@@ -170,7 +179,7 @@
       <dynamic_friction> 1.00 </dynamic_friction>
       <spring_coeff unit="LBS/FT">      330750.00 </spring_coeff>
       <damping_coeff unit="LBS/FT/SEC"> 330750.00 </damping_coeff>
-    </contact>
+    </contact -->
 
   </ground_reactions>
 
@@ -237,10 +246,13 @@
     </engine>
 
     <tank type="FUEL" number="0">
-      <location unit="IN">
-	<x> 890.99 </x>
+      <location unit="M">
+	<x> -1.2609 </x>
+	<y> -6.9822 </y>
+	<z> -1.3858 </z>
+	<!-- x> 890.99 </x>
 	<y>   0.00 </y>
-	<z> -44.42 </z>
+	<z> -44.42 </z -->
       </location>
 	<priority>2</priority>
       <capacity unit="LBS"> 6525.00 </capacity>
@@ -248,10 +260,13 @@
     </tank>
 
     <tank type="FUEL" number="1">
-      <location unit="IN">
-	<x> 890.99 </x>
+      <location unit="M">
+	<x> -1.2609 </x>
+	<y> -3.9822 </y>
+	<z> -1.3858 </z>
+	<!-- x> 890.99 </x>
 	<y>   0.00 </y>
-	<z> -44.42 </z>
+	<z> -44.42 </z -->
       </location>
 	<priority>4</priority>
       <capacity unit="LBS"> 24605.00 </capacity>
@@ -259,10 +274,13 @@
     </tank>
 
     <tank type="FUEL" number="2">
-      <location unit="IN">
-	<x> 890.99 </x>
+      <location unit="M">
+	<x> -2.0000 </x>
+	<y> 0.0000 </y>
+	<z> -1.3858 </z>
+	<!-- x> 890.99 </x>
 	<y>   0.00 </y>
-	<z> -44.42 </z>
+	<z> -44.42 </z -->
       </location>
 	<priority>3</priority>
       <capacity unit="LBS"> 34642.00 </capacity>
@@ -270,10 +288,13 @@
     </tank>
 
     <tank type="FUEL" number="3">
-      <location unit="IN">
-	<x> 890.99 </x>
+      <location unit="M">
+	<x> -1.2609 </x>
+	<y>  3.9822 </y>
+	<z> -1.3858 </z>
+	<!-- x> 890.99 </x>
 	<y>   0.00 </y>
-	<z> -44.42 </z>
+	<z> -44.42 </z -->
       </location>
 	<priority>4</priority>
       <capacity unit="LBS"> 24605.00 </capacity>
@@ -281,10 +302,13 @@
     </tank>
 
     <tank type="FUEL" number="4">
-      <location unit="IN">
-	<x> 890.99 </x>
+      <location unit="M">
+	<x> -1.2609 </x>
+	<y>  6.9822 </y>
+	<z> -1.3858 </z>
+	<!-- x> 890.99 </x>
 	<y>   0.00 </y>
-	<z> -44.42 </z>
+	<z> -44.42 </z -->
       </location>
 	<priority>2</priority>
       <capacity unit="LBS"> 6525.00 </capacity>
@@ -292,10 +316,13 @@
     </tank>
 
     <tank type="FUEL" number="5">
-      <location unit="IN">
-	<x> 890.99 </x>
+      <location unit="M">
+	<x> 23.5067 </x>
+	<y>  0.0000 </y>
+	<z>  1.1217 </z>
+	<!-- x> 890.99 </x>
 	<y>   0.00 </y>
-	<z> -44.42 </z>
+	<z> -44.42 </z -->
       </location>
 	<priority>3</priority>
       <capacity unit="LBS"> 10848.00 </capacity>
@@ -303,10 +330,13 @@
     </tank>
 
     <tank type="FUEL" number="6">
-      <location unit="IN">
-	<x> 890.99 </x>
+      <location unit="M">
+	<x> -5.0000 </x>
+	<y>  0.0000 </y>
+	<z> -1.3858 </z>
+	<!-- x> 890.99 </x>
 	<y>   0.00 </y>
-	<z> -44.42 </z>
+	<z> -44.42 </z -->
       </location>
 	<priority>1</priority>
       <capacity unit="LBS"> 13300.00 </capacity>
@@ -314,10 +344,13 @@
     </tank>
 
     <tank type="FUEL" number="7">
-      <location unit="IN">
-	<x> 890.99 </x>
+      <location unit="M">
+	<x>  2.0000 </x>
+	<y>  0.0000 </y>
+	<z> -1.3858 </z>
+	<!-- x> 890.99 </x>
 	<y>   0.00 </y>
-	<z> -44.42 </z>
+	<z> -44.42 </z -->
       </location>
 	<priority>1</priority>
       <capacity unit="LBS"> 13300.00 </capacity>
