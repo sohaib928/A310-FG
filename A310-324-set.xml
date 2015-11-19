@@ -126,6 +126,19 @@ Just some quick fixes by Jabberwocky to make it easier flyable, in the hope, it 
 			</autopilot>
 		</systems>
 </sim>
+    
+  	<consumables>
+	  <fuel>
+		<tank n="0"><name>Outer Left</name></tank>
+		<tank n="1"><name>Inner Left</name></tank>
+		<tank n="2"><name>Center</name></tank>
+		<tank n="3"><name>Inner Right</name></tank>
+		<tank n="4"><name>Outer Right</name></tank>
+		<tank n="5"><name>Trim Tank</name></tank>
+		<tank n="6"><name>Opt. Ctr. Fwd.</name></tank>
+		<tank n="7"><name>Opt. Ctr. Rear</name></tank>
+	  </fuel>
+	</consumables>
 
 	<!-- Payload section: Whatever weights -->
 	<payload>
@@ -140,10 +153,10 @@ Just some quick fixes by Jabberwocky to make it easier flyable, in the hope, it 
 
 		<weight n="1">
 			<!-- payload -->
-			<name>Lower Deck Aft Cargo</name>
+			<name>Passengers and Baggage</name>
 			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]" />
 			<min-lb type="double">    0</min-lb>
-			<max-lb type="double">32793</max-lb>
+			<max-lb type="double">73414</max-lb>
 		</weight>
 
 	</payload>
