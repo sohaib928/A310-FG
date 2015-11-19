@@ -6,13 +6,13 @@ Author:   Aero-Matic v 0.82
 Inputs:
 name:           PW-JT9D-7R4
 type:           turbine
-thrust:         48000 lb
+thrust:         56000 lb (the original 48000lbs were for the JT9D)
 augmented?      no
 injected?       no
 -->
 
 <turbine_engine name="PW-4156A">
-<milthrust> 48000.0 </milthrust>
+<milthrust>   56000.0 </milthrust>
 <bypassratio>     1.0 </bypassratio>
 <tsfc>            0.6 </tsfc>	<!-- changed to 0.6 from 0.8 according to P&W spec sheet -->
 <bleed>           0.03</bleed>

@@ -188,6 +188,10 @@
 	<yaw>   0.00 </yaw>
       </orient>
       <feed>0</feed>
+      <feed>1</feed>
+      <feed>2</feed>
+      <feed>5</feed>
+      <feed>6</feed>
       <thruster file="direct">
 	<location unit="IN">
 	  <x> 890.99 </x>
@@ -213,7 +217,11 @@
 	<roll>  0.00 </roll>
 	<yaw>   0.00 </yaw>
       </orient>
-      <feed>1</feed>
+      <feed>2</feed>
+      <feed>3</feed>
+      <feed>4</feed>
+      <feed>5</feed>
+      <feed>7</feed>
       <thruster file="direct">
 	<location unit="IN">
 	  <x> 890.99 </x>
@@ -234,8 +242,9 @@
 	<y>   0.00 </y>
 	<z> -44.42 </z>
       </location>
-      <capacity unit="LBS"> 30539.25 </capacity>
-      <contents unit="LBS"> 15269.63 </contents>
+	<priority>2</priority>
+      <capacity unit="LBS"> 6525.00 </capacity>
+      <contents unit="LBS"> 6525.00 </contents>
     </tank>
 
     <tank type="FUEL" number="1">
@@ -244,8 +253,9 @@
 	<y>   0.00 </y>
 	<z> -44.42 </z>
       </location>
-      <capacity unit="LBS"> 30539.25 </capacity>
-      <contents unit="LBS"> 15269.63 </contents>
+	<priority>4</priority>
+      <capacity unit="LBS"> 24605.00 </capacity>
+      <contents unit="LBS"> 24605.00 </contents>
     </tank>
 
     <tank type="FUEL" number="2">
@@ -254,8 +264,64 @@
 	<y>   0.00 </y>
 	<z> -44.42 </z>
       </location>
-      <capacity unit="LBS"> 30539.25 </capacity>
-      <contents unit="LBS"> 15269.63 </contents>
+	<priority>3</priority>
+      <capacity unit="LBS"> 34642.00 </capacity>
+      <contents unit="LBS"> 34642.00 </contents>
+    </tank>
+
+    <tank type="FUEL" number="3">
+      <location unit="IN">
+	<x> 890.99 </x>
+	<y>   0.00 </y>
+	<z> -44.42 </z>
+      </location>
+	<priority>4</priority>
+      <capacity unit="LBS"> 24605.00 </capacity>
+      <contents unit="LBS"> 24605.00 </contents>
+    </tank>
+
+    <tank type="FUEL" number="4">
+      <location unit="IN">
+	<x> 890.99 </x>
+	<y>   0.00 </y>
+	<z> -44.42 </z>
+      </location>
+	<priority>2</priority>
+      <capacity unit="LBS"> 6525.00 </capacity>
+      <contents unit="LBS"> 6525.00 </contents>
+    </tank>
+
+    <tank type="FUEL" number="5">
+      <location unit="IN">
+	<x> 890.99 </x>
+	<y>   0.00 </y>
+	<z> -44.42 </z>
+      </location>
+	<priority>3</priority>
+      <capacity unit="LBS"> 10848.00 </capacity>
+      <contents unit="LBS"> 10848.00 </contents>
+    </tank>
+
+    <tank type="FUEL" number="6">
+      <location unit="IN">
+	<x> 890.99 </x>
+	<y>   0.00 </y>
+	<z> -44.42 </z>
+      </location>
+	<priority>1</priority>
+      <capacity unit="LBS"> 13300.00 </capacity>
+      <contents unit="LBS">     0.00 </contents>
+    </tank>
+
+    <tank type="FUEL" number="7">
+      <location unit="IN">
+	<x> 890.99 </x>
+	<y>   0.00 </y>
+	<z> -44.42 </z>
+      </location>
+	<priority>1</priority>
+      <capacity unit="LBS"> 13300.00 </capacity>
+      <contents unit="LBS">     0.00 </contents>
     </tank>
 
   </propulsion>
