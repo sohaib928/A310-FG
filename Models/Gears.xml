@@ -1,4 +1,4 @@
-﻿<?xml version = '1.0' encoding = 'UTF-8' ?>
+<?xml version = '1.0' encoding = 'UTF-8' ?>
 
  <!-- 
  Copyright Toryx 2014
@@ -13,7 +13,6 @@
 <!-- ................................................... -->
 <!-- Animations -->
 <!-- ................................................... -->
- 
  <animation>
   <type>material</type>
    <object-name>gear_left_leg</object-name>

@@ -1,104 +1,104 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
- <!-- 
- Toryx 2014
- Distributed under the terms of the GNU General Public Livense v2
- Flightdeck: Pierre Duval
- Sounds: Taken from A300, modified by Airbus330
- -->
- 
+<!-- 
+Toryx 2014
+Distributed under the terms of the GNU General Public Livense v2
+Flightdeck: Pierre Duval
+Sounds: Taken from A300, modified by Airbus330
+-->
+
 <PropertyList>
 
-	<sim>
-		<description>Airbus A310-222</description>
-		<aircraft-version>0.13</aircraft-version>
-		<status>alpha</status>
-		<rating>
-		 <FDM type="int">1</FDM>
-		 <systems type="int">0</systems>
-		 <cockpit type="int">3</cockpit>
-		 <model type="int">4</model>
-		</rating>
-		<author>Models: Toryx; Flightdeck: Pierre Duval; Sounds and AP: Ja Sam Niko</author>
-		<flight-model>jsb</flight-model>
-		<aero>A310-222</aero>
-		<variant>308</variant>
-		<engine>PW-JT9D-7R4E1</engine>
-		
-		<startup>
-			<splash-texture>Splashs/splash-222.png</splash-texture>
-			<splash-title>Airbus A310-222 v0.13</splash-title>
-		</startup>
-		<flaps>
-			<setting>0.00</setting>
-			<setting>0.29</setting>
-			<setting>0.596</setting>
-			<setting>0.745</setting>
-			<setting>1</setting>
-	
-		</flaps>
+<sim>
+  <description>Airbus A310-222</description>
+  <aircraft-version>0.13</aircraft-version>
+  <status>alpha</status>
+  <rating>
+    <FDM type="int">1</FDM>
+    <systems type="int">0</systems>
+    <cockpit type="int">3</cockpit>
+    <model type="int">4</model>
+  </rating>
+  <author>Models: Toryx; Flightdeck: Pierre Duval; Sounds and AP: Ja Sam Niko</author>
+  <flight-model>jsb</flight-model>
+  <aero>A310-222</aero>
+  <variant>308</variant>
+  <engine>PW-JT9D-7R4E1</engine>
+  
+  <startup>
+    <splash-texture>Aircraft/A310/Splashs/splash-222.png</splash-texture>
+    <splash-title>Airbus A310-222 v0.13</splash-title>
+  </startup>
+  <flaps>
+    <setting>0.00</setting>
+    <setting>0.29</setting>
+    <setting>0.596</setting>
+    <setting>0.745</setting>
+    <setting>1</setting>
+    
+  </flaps>
 
 
-		<model>
-			<path>Aircraft/A310/Models/A310-222.xml</path>
-			<livery>
-				<file type="string">DE90</file>
-			</livery>
-		</model>
+  <model>
+    <path>Aircraft/A310/Models/A310-222.xml</path>
+    <livery>
+      <file type="string">DE90</file>
+    </livery>
+  </model>
 
-		<sound>
-            <path>Aircraft/A310/Sounds/A310-sound.xml</path>
-            <switch type = "bool">0</switch>
-			<Evolume>1</Evolume>
-        </sound>
-		
-		<view>
-		   <internal archive="y">true</internal>
-			<config>
-			 <x-offset-m archive="y">-0.48</x-offset-m>
-			 <y-offset-m archive="y">0.75</y-offset-m>
-			 <z-offset-m archive="y">-17.4228</z-offset-m>
-			 <pitch-offset-deg archive="y">-5.0</pitch-offset-deg>
-			  <default-field-of-view-deg type="double">80.0</default-field-of-view-deg>
-			</config>
-		</view>
-			<chase-distance-m type="double">-80</chase-distance-m>
-			
-			
-		<menubar>
-		  <default>
-		   <menu n="100">
-			<label>Airbus A310</label>
-			<enabled type="bool">true</enabled>
-			<item>
-			 <label>Select Livery</label>
-			 <binding>
-			  <command>nasal</command>
-			  <script>aircraft.livery.dialog.open()</script>
-			 </binding>
-			</item>
-		   </menu>
-		  </default>
-		</menubar>
-	</sim>
-	
-	<engines>
-		<engine n="0">
-			<running>true</running>
-			<rpm>1000</rpm>
-			<reverser-position type="double">0.000000</reverser-position>
-		</engine>
-		<engine n="1">
-			<running>true</running>
-			<rpm>1000</rpm>
-			<reverser-position type="double">0.000000</reverser-position>
-		</engine>
-	</engines>	
-	
-	<nasal>
-		<A310> 
-		  <file>Nasal/liveries.nas</file>
-		</A310>
-	</nasal> 
+  <sound>
+    <path>Aircraft/A310/Sounds/A310-sound.xml</path>
+    <switch type = "bool">0</switch>
+    <Evolume>1</Evolume>
+  </sound>
+  
+  <view>
+    <internal archive="y">true</internal>
+    <config>
+      <x-offset-m archive="y">-0.48</x-offset-m>
+      <y-offset-m archive="y">0.75</y-offset-m>
+      <z-offset-m archive="y">-17.4228</z-offset-m>
+      <pitch-offset-deg archive="y">-5.0</pitch-offset-deg>
+      <default-field-of-view-deg type="double">80.0</default-field-of-view-deg>
+    </config>
+  </view>
+  <chase-distance-m type="double">-80</chase-distance-m>
+  
+  
+  <menubar>
+    <default>
+      <menu n="100">
+	<label>Airbus A310</label>
+	<enabled type="bool">true</enabled>
+	<item>
+	  <label>Select Livery</label>
+	  <binding>
+	    <command>nasal</command>
+	    <script>aircraft.livery.dialog.open()</script>
+	  </binding>
+	</item>
+      </menu>
+    </default>
+  </menubar>
+</sim>
+
+<engines>
+  <engine n="0">
+    <running>true</running>
+    <rpm>1000</rpm>
+    <reverser-position type="double">0.000000</reverser-position>
+  </engine>
+  <engine n="1">
+    <running>true</running>
+    <rpm>1000</rpm>
+    <reverser-position type="double">0.000000</reverser-position>
+  </engine>
+</engines>	
+
+<nasal>
+  <A310> 
+    <file>Aircraft/A310/Nasal/liveries.nas</file>
+  </A310>
+</nasal> 
 
 </PropertyList>
