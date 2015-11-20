@@ -6,15 +6,15 @@ Author:   Aero-Matic v 0.82
 Inputs:
 name:           PW-JT9D-7R4
 type:           turbine
-thrust:         48000 lb
+thrust:         50000 lb
 augmented?      no
 injected?       no
 -->
 
 <turbine_engine name="PWJT9D-7R4">
-<milthrust> 48000.0 </milthrust>
+<milthrust> 50000.0 </milthrust>
 <bypassratio>     1.0 </bypassratio>
-<tsfc>            0.8 </tsfc>
+<tsfc>            0.45 </tsfc>
 <bleed>           0.03</bleed>
 <idlen1>         30.0 </idlen1>
 <idlen2>         60.0 </idlen2>

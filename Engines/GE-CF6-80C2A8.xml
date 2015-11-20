@@ -14,7 +14,7 @@ injected?       no
 <turbine_engine name="CF6-80C2A8">
 <milthrust> 59000.0 </milthrust>
 <bypassratio>     1.0 </bypassratio>
-<tsfc>            0.8 </tsfc>
+<tsfc>            0.24 </tsfc>
 <bleed>           0.03</bleed>
 <idlen1>         30.0 </idlen1>
 <idlen2>         60.0 </idlen2>

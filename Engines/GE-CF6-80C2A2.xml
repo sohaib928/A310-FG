@@ -6,15 +6,15 @@ Author:   Aero-Matic v 0.82
 Inputs:
 name:           CF6-80C2A2
 type:           turbine
-thrust:         53500 lb
+thrust:         53200 lb
 augmented?      no
 injected?       no
 -->
 
 <turbine_engine name="CF6-80C2A2">
-<milthrust> 53500.0 </milthrust>
+<milthrust> 53200.0 </milthrust>
 <bypassratio>     1.0 </bypassratio>
-<tsfc>            0.8 </tsfc>
+<tsfc>            0.24 </tsfc>
 <bleed>           0.03</bleed>
 <idlen1>         30.0 </idlen1>
 <idlen2>         60.0 </idlen2>
