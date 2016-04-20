@@ -42,7 +42,7 @@
 		<repeatable>false</repeatable>
 		<binding>
 			<command>nasal</command>
-			<script>b777.showNd("fo");</script>
+			<script>A310.showNd("fo");</script>
 		</binding>
 	</action>
 </animation>

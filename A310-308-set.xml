@@ -64,6 +64,9 @@ Sounds: Taken from A300, modified by Airbus330
   </view>
   <chase-distance-m type="double">-80</chase-distance-m>
   
+    <instrument-options>
+	<canvas-popup-enable type="bool">true</canvas-popup-enable>
+  </instrument-options>
   
   <menubar>
     <default>
@@ -98,6 +101,9 @@ Sounds: Taken from A300, modified by Airbus330
 <nasal>
   <A310> 
     <file>Aircraft/A310/Nasal/liveries.nas</file>
+    <file>Aircraft/A310/Nasal/electrical.nas</file>
+	<file>Aircraft/A310/Nasal/systems.nas</file>
+	<file>Aircraft/A310/Models/Interior/FlightDeck/Panel/Instruments/ND/ND.nas</file>
   </A310>
 </nasal> 
 

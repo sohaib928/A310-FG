@@ -138,7 +138,8 @@
   
   <!-- nd -->
   <model>
-    <path>Aircraft/A310/Models/Interior/FlightDeck/Panel/Instruments/nd-old/nd.xml</path>
+	<name>Captain ND</name>
+    <path>Aircraft/A310/Models/Interior/FlightDeck/Panel/Instruments/ND/ND_L.xml</path>
     <offsets>
       <x-m> -0.015 </x-m>
       <y-m> -0.571 </y-m>
@@ -148,7 +149,30 @@
   </model>
   
   <model>
-    <path>Aircraft/A310/Models/Interior/FlightDeck/Panel/Instruments/nd-old/nd.xml</path>
+	<name>Captain ND Border</name>
+    <path>Aircraft/A310/Models/Interior/FlightDeck/Panel/Instruments/ND/border.xml</path>
+    <offsets>
+      <x-m> -0.015 </x-m>
+      <y-m> -0.571 </y-m>
+      <z-m> -0.191 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+	<name>Copilot ND</name>
+    <path>Aircraft/A310/Models/Interior/FlightDeck/Panel/Instruments/ND/ND_R.xml</path>
+    <offsets>
+      <x-m> -0.015</x-m>
+      <y-m>  0.571 </y-m>
+      <z-m> -0.191 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+	<name>Copilot ND Border</name>
+    <path>Aircraft/A310/Models/Interior/FlightDeck/Panel/Instruments/ND/border.xml</path>
     <offsets>
       <x-m> -0.015</x-m>
       <y-m>  0.571 </y-m>

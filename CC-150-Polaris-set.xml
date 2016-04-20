@@ -121,6 +121,10 @@ Just some quick fixes by Jabberwocky to make it easier flyable, in the hope, it 
 			</default>
 		</menubar>
 
+		  <instrument-options>
+	<canvas-popup-enable type="bool">true</canvas-popup-enable>
+  </instrument-options>
+		
 		<!-- Systems -->
 		<systems>
 			<autopilot>
@@ -211,6 +215,9 @@ Just some quick fixes by Jabberwocky to make it easier flyable, in the hope, it 
 	<nasal>
 		<A310> 
 			<file>Aircraft/A310/Nasal/liveries.nas</file>
+		    <file>Aircraft/A310/Nasal/electrical.nas</file>
+			<file>Aircraft/A310/Nasal/systems.nas</file>
+			<file>Aircraft/A310/Models/Interior/FlightDeck/Panel/Instruments/ND/ND.nas</file>
 		</A310>
 		<reversethrust>
 			<file>Aircraft/A310/Nasal/reverse-thrust.nas</file>
