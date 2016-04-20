@@ -43,7 +43,7 @@ Just some quick fixes by Jabberwocky to make it easier flyable, in the hope, it 
 		</flaps>
 
 		<model>
-			<path>Aircraft/A310/Models/A310-324.xml</path>
+			<path>Aircraft/A310/Models/CC-150-Polaris.xml</path>
 
 			<!-- prep to install a pushback -->
 			<!-- JPack: push forces for Voodoomaster Pushback -->
