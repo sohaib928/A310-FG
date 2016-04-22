@@ -90,7 +90,7 @@
 			<description>Payload+Fuel leads to weight above MTOW to make the fuel-load trade as with all Airbuses</description>
 			<weight unit="LBS">  0.00 </weight>
 			<location name="POINTMASS" unit="M">
-				<x>   0.00 </x>
+				<x>  -4.00 </x>
 				<y>   0.00 </y>
 				<z>  -1.00 </z>
 			</location>

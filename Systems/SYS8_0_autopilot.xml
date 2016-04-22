@@ -324,12 +324,12 @@
 			<!-- gamma>0.0</gamma -->     <!-- input value weighing factor for unfiltered derivative error -->
 			<!-- Ti>100.00</Ti -->          <!-- integrator time  10.0 -->
 			<!-- Td>0.00</Td -->       <!-- derivator time -->
-			<min>
+			<!-- min>
 				<property>/autopilot/internal/min-pitch</property>
-			</min>   <!-- minimum output clamp -->
-			<max>
+			</min -->   <!-- minimum output clamp -->
+			<!-- max>
 				<property>/autopilot/internal/max-pitch</property>
-			</max>   <!-- maximum output clamp -->
+			</max -->   <!-- maximum output clamp -->
 		</config>
 	</pi-simple-controller>
   
