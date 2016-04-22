@@ -339,7 +339,7 @@
 			</location>
 			<priority>3</priority>
 			<capacity unit="LBS"> 10848.00 </capacity>
-			<contents unit="LBS"> 10848.00 </contents>
+			<contents unit="LBS"> 1084.80 </contents>
 		</tank>
 
 		<tank type="FUEL" number="6">
