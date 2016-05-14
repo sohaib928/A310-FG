@@ -30,8 +30,7 @@ Just some quick fixes by Jabberwocky to make it easier flyable, in the hope, it 
 		<engine>GE-CF6-80C2A2</engine>
     
 		<startup>
-			<splash-texture>Splashs/splash-324.png</splash-texture>
-			<splash-title>Airbus A310-324 v0.13</splash-title>
+			<splash-texture>Splashs/cc150-splash.png</splash-texture>
 		</startup>
 
 		<flaps>
@@ -214,10 +213,10 @@ Just some quick fixes by Jabberwocky to make it easier flyable, in the hope, it 
 
 	<nasal>
 		<A310> 
-			<file>Aircraft/A310/Nasal/liveries.nas</file>
+	            <file>Aircraft/A310/Nasal/polaris-liveries.nas</file>
 		    <file>Aircraft/A310/Nasal/electrical.nas</file>
-			<file>Aircraft/A310/Nasal/systems.nas</file>
-			<file>Aircraft/A310/Models/Interior/FlightDeck/Panel/Instruments/ND/ND.nas</file>
+		    <file>Aircraft/A310/Nasal/systems.nas</file>
+		    <file>Aircraft/A310/Models/Interior/FlightDeck/Panel/Instruments/ND/ND.nas</file>
 		</A310>
 		<reversethrust>
 			<file>Aircraft/A310/Nasal/reverse-thrust.nas</file>
