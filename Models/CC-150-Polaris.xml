@@ -93,7 +93,7 @@
 <!-- ................................................... -->
 <nasal>
  <load>
-  var livery_update = aircraft.livery_update.new("Aircraft/A310/Models/Liveries");
+  var livery_update = aircraft.livery_update.new("Aircraft/A310/Models/Polaris-Liveries");
  </load>
  
  <unload>
