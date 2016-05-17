@@ -168,6 +168,20 @@ Just some quick fixes by Jabberwocky to make it easier flyable, in the hope, it 
 
 	<input>
 		<keyboard>
+
+			<key n="2">
+				<name>Ctrl-B</name>
+				<desc>Toggle speedbrakes.</desc>
+				<binding>
+					<command>property-cycle</command>
+					<property>controls/flight/speedbrake</property>
+					<value>0</value>
+					<value>0.33</value>
+					<value>0.66</value>
+					<value>1</value>
+				</binding>
+			</key>
+
 			<key n="127">
 				<name>Delete</name>
 				<desc>Toggle Reversers</desc>

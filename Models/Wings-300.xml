@@ -7,105 +7,108 @@
 
 <PropertyList>
 
- <path>Aircraft/A310/Models/Wings-300.ac</path>
-  <!-- Speedbrakes -->
-<animation>
-  <type>rotate</type>
-  <object-name>spoiler1_l</object-name>
-  <object-name>spoiler2_l</object-name>
-  <property>controls/flight/spoilers</property>
- <factor>45</factor>		 
- <axis>
-  <x2-m>2.4310</x2-m>
-  <y2-m>-6.720</y2-m>
-  <z2-m>-0.3197</z2-m>
-  <x1-m>2.431</x1-m>
-  <y1-m>-3.058</y1-m>
-  <z1-m>-0.7409</z1-m>
- </axis>
-</animation>
- 
- <animation>
-  <type>rotate</type>
-  <object-name>spoiler3_l</object-name>
-  <object-name>spoiler4_l</object-name>
-  <property>controls/flight/spoilers</property>
- <factor>-40</factor>		 
- <axis>
-  <x2-m>2.52323</x2-m>
-  <y2-m>-9.29127</y2-m>
-  <z2-m>-0.0903792</z2-m>
-  <x1-m>4.10091</x1-m>
-  <y1-m>-12.78447</y1-m>
-  <z1-m>0.1104587</z1-m>
- </axis>
-</animation>
+	<path>Aircraft/A310/Models/Wings-300.ac</path>
 
-<animation>
-  <type>rotate</type>
-  <object-name>spoiler5_l</object-name>
-  <object-name>spoiler6_l</object-name>
-  <object-name>spoiler7_l</object-name>
-  <property>controls/flight/spoilers</property>
- <factor>-45</factor>		 
- <axis>
-  <x2-m>4.18474</x2-m>
-  <y2-m>-12.75944</y2-m>
-  <z2-m>0.0978145</z2-m>
-  <x1-m>6.33666</x1-m>
-  <y1-m>-17.74405</y1-m>
-  <z1-m>0.3999608</z1-m>
- </axis>
-</animation>
+	<!-- Speedbrakes and spoilers-->
+	<animation>
+		<type>rotate</type>
+		<object-name>spoiler1_l</object-name>
+		<object-name>spoiler2_l</object-name>
+		<property>controls/flight/spoilers</property>
+		<factor>45</factor>		 
+		<axis>
+			<x2-m>2.4310</x2-m>
+			<y2-m>-6.720</y2-m>
+			<z2-m>-0.3197</z2-m>
+			<x1-m>2.431</x1-m>
+			<y1-m>-3.058</y1-m>
+			<z1-m>-0.7409</z1-m>
+		</axis>
+	</animation>
+ 
+	<!-- stolen from spoilers for speed brakes -->
+	<animation>
+		<type>rotate</type>
+		<object-name>spoiler3_l</object-name>
+		<object-name>spoiler4_l</object-name>
+		<property>controls/flight/speedbrake</property>
+		<factor>-40</factor>		 
+		<axis>
+			<x2-m>2.52323</x2-m>
+			<y2-m>-9.29127</y2-m>
+			<z2-m>-0.0903792</z2-m>
+			<x1-m>4.10091</x1-m>
+			<y1-m>-12.78447</y1-m>
+			<z1-m>0.1104587</z1-m>
+		</axis>
+	</animation>
 
-<animation>
-  <type>rotate</type>
-  <object-name>spoiler1_r</object-name>
-  <object-name>spoiler2_r</object-name>
-  <property>controls/flight/spoilers</property>
- <factor>-45</factor>		 
- <axis>
-  <x2-m>2.4310</x2-m>
-  <y2-m>6.720</y2-m>
-  <z2-m>-0.3197</z2-m>
-  <x1-m>2.431</x1-m>
-  <y1-m>3.058</y1-m>
-  <z1-m>-0.7409</z1-m>
- </axis>
-</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>spoiler5_l</object-name>
+		<object-name>spoiler6_l</object-name>
+		<object-name>spoiler7_l</object-name>
+		<property>controls/flight/spoilers</property>
+		<factor>-45</factor>		 
+		<axis>
+			<x2-m>4.18474</x2-m>
+			<y2-m>-12.75944</y2-m>
+			<z2-m>0.0978145</z2-m>
+			<x1-m>6.33666</x1-m>
+			<y1-m>-17.74405</y1-m>
+			<z1-m>0.3999608</z1-m>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>spoiler1_r</object-name>
+		<object-name>spoiler2_r</object-name>
+		<property>controls/flight/spoilers</property>
+		<factor>-45</factor>		 
+		<axis>
+			<x2-m>2.4310</x2-m>
+			<y2-m>6.720</y2-m>
+			<z2-m>-0.3197</z2-m>
+			<x1-m>2.431</x1-m>
+			<y1-m>3.058</y1-m>
+			<z1-m>-0.7409</z1-m>
+		</axis>
+	</animation>
  
- <animation>
-  <type>rotate</type>
-  <object-name>spoiler3_r</object-name>
-  <object-name>spoiler4_r</object-name>
-  <property>controls/flight/spoilers</property>
- <factor>40</factor>		 
- <axis>
-  <x2-m>2.52323</x2-m>
-  <y2-m>9.29127</y2-m>
-  <z2-m>-0.0903792</z2-m>
-  <x1-m>4.10091</x1-m>
-  <y1-m>12.78447</y1-m>
-  <z1-m>0.1104587</z1-m>
- </axis>
-</animation>
+	<!-- stolen from spoilers for speed brakes -->
+	<animation>
+		<type>rotate</type>
+		<object-name>spoiler3_r</object-name>
+		<object-name>spoiler4_r</object-name>
+		<property>controls/flight/speedbrake</property>
+		<factor>40</factor>		 
+		<axis>
+			<x2-m>2.52323</x2-m>
+			<y2-m>9.29127</y2-m>
+			<z2-m>-0.0903792</z2-m>
+			<x1-m>4.10091</x1-m>
+			<y1-m>12.78447</y1-m>
+			<z1-m>0.1104587</z1-m>
+		</axis>
+	</animation>
  
- <animation>
-  <type>rotate</type>
-  <object-name>spoiler5_r</object-name>
-  <object-name>spoiler6_r</object-name>
-  <object-name>spoiler7_r</object-name>
-  <property>controls/flight/spoilers</property>
- <factor>45</factor>		 
- <axis>
-  <x2-m>4.18474</x2-m>
-  <y2-m>12.75944</y2-m>
-  <z2-m>0.0978145</z2-m>
-  <x1-m>6.33666</x1-m>
-  <y1-m>17.74405</y1-m>
-  <z1-m>0.3999608</z1-m>
- </axis>
-</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>spoiler5_r</object-name>
+		<object-name>spoiler6_r</object-name>
+		<object-name>spoiler7_r</object-name>
+		<property>controls/flight/spoilers</property>
+		<factor>45</factor>		 
+		<axis>
+			<x2-m>4.18474</x2-m>
+			<y2-m>12.75944</y2-m>
+			<z2-m>0.0978145</z2-m>
+			<x1-m>6.33666</x1-m>
+			<y1-m>17.74405</y1-m>
+			<z1-m>0.3999608</z1-m>
+		</axis>
+	</animation>
  
  <!-- Ailerons -->
 <animation>
