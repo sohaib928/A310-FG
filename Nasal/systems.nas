@@ -1,43 +1,11 @@
-# System file by it0uchpods.
-#############################
+#A310 Systems by Joshua Davidson (it0uchpods/411)
+  
+setlistener("/sim/signals/fdm-initialized", func {
+  ap_init();
+  setprop("/autopilot/locks/at-mode", 0);
+  setprop("/controls/switches/at", 0);
+  var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Aircraft/MD-88/Systems/autopilot-dlg.xml");
+  print("SYSTEMS ... FINE!");
+});
 
-# NOTE: This file contains a loop for running all update functions, so it should be loaded last
-
-## SYSTEMS LOOP
-###############
-
-var systems =
- {
- stopUpdate: 0,
- init: func
-  {
-  print("Stuff initialized!!!");
-  systems.stop();
-  settimer(func
-   {
-   systems.stopUpdate = 0;
-   systems.update();
-   }, 0.5);
-  },
- stop: func
-  {
-  systems.stopUpdate = 1;
-  },
- update: func
-  {
-  setprop("engines/engine[0]/egt-degc", (getprop("engines/engine[0]/egt-degf") - 32) / 1.8);
-  setprop("engines/engine[1]/egt-degc", (getprop("engines/engine[1]/egt-degf") - 32) / 1.8);
-#  apu1.update();
-#  engine1.update();
-#  engine2.update();
-#  speedbrakes.update();
-#  instruments.update();
-#  update_electrical();
-
-  # stop calling our systems code if the stop() function was called or the aircraft crashes
-  if (!systems.stopUpdate and !props.globals.getNode("sim/crashed").getBoolValue())
-   {
-   settimer(systems.update, 0);
-   }
-  }
- };
+# That is all for now.

@@ -37,32 +37,15 @@ var bus_ac	= props.globals.getNode("/systems/electrical/bus-ac");
 
 
   var elec_main_on = func {
-        setprop("systems/electrical/on", 1);
-        setprop("systems/electrical/outputs/avionics-fan", 0);
-        setprop("systems/electrical/outputs/gps-mfd", 0);
-        setprop("systems/electrical/outputs/gps", 0);
-        setprop("systems/electrical/outputs/hsi", 0);
-        setprop("systems/electrical/outputs/comm", 0);
-        setprop("systems/electrical/outputs/comm[1]", 0);
-        setprop("systems/electrical/outputs/nav", 0);
-        setprop("systems/electrical/outputs/nav[1]", 0);
-        setprop("systems/electrical/outputs/dme", 0);
-        setprop("systems/electrical/outputs/dme[1]", 0);
-        setprop("systems/electrical/outputs/adf", 0);
-        setprop("systems/electrical/outputs/adf[1]", 0);
-        setprop("systems/electrical/outputs/mk-viii", 0);
-        setprop("systems/electrical/outputs/tacan", 0);
-        setprop("systems/electrical/outputs/turn-coordinator", 0);
-        setprop("systems/electrical/outputs/audio-panel", 0);
-        setprop("systems/electrical/outputs/audio-panel[1]", 0);
-        setprop("systems/electrical/outputs/transponder", 0);
+        setprop("systems/electrical/on", 1);;
 		setprop("systems/electrical/outputs/efis", 25);	
+		setprop("systems/electrical/outputs/mk-viii", 28);	
+		setprop("engines/engine[0]/egt-degc", (getprop("engines/engine[0]/egt-degf") - 32) / 1.8);
+		setprop("engines/engine[1]/egt-degc", (getprop("engines/engine[1]/egt-degf") - 32) / 1.8);
 }
 
 var update_electrical = func {
   elec_main_on();
-    setprop("engines/engine[0]/egt-degc", (getprop("engines/engine[0]/egt-degf") - 32) / 1.8);
-    setprop("engines/engine[1]/egt-degc", (getprop("engines/engine[1]/egt-degf") - 32) / 1.8);
   settimer(update_electrical,ELEC_UPDATE_PERIOD);			# Schedule next run
 }
 

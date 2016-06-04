@@ -91,23 +91,19 @@ Just some quick fixes by Jabberwocky to make it easier flyable, in the hope, it 
 	<canvas-popup-enable type="bool">true</canvas-popup-enable>
   </instrument-options>
   
+  <instrumentation>
+
+    <mk-viii>
+       <name>mk-viii</name>
+       <number>0</number>
+    </mk-viii>
+
+  </instrumentation>
+  
+        <flight-recorder include="Systems/flight-recorder.xml"/>
+  
   <menubar>
     <default>
-				<!-- autopilot dialog, copied from Voodoomaster in JPack -->
-				<menu n="3">
-					<item>
-						<name>autopilot</name>
-						<label>Autopilot Settings</label>
-						<binding>
-							<command>nasal</command>
-							<script>
-								var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", 
-											"Aircraft/A310/Dialogs/autopilot8.xml");
-								autopilot.open();
-							</script>
-						</binding>
-					</item>
-				</menu>
       <menu n="100">
 	<label>Airbus A310</label>
 	<enabled type="bool">true</enabled>
@@ -125,7 +121,7 @@ Just some quick fixes by Jabberwocky to make it easier flyable, in the hope, it 
 		<!-- Systems -->
 		<systems>
 			<autopilot>
-				<path>Aircraft/A310/Systems/SYS8_0_autopilot.xml</path>
+				<path>Aircraft/A310/Systems/IT2-autopilot.xml</path>
 			</autopilot>
 		</systems>
 </sim>
@@ -205,14 +201,55 @@ Just some quick fixes by Jabberwocky to make it easier flyable, in the hope, it 
 			<max-pitch type="float"> 6.0</max-pitch>
 			<min-pitch type="float">-4.0</min-pitch>
 		</internal>
-
 	</autopilot>
+	
+	<instrumentation>
+	<mk-viii>                           <!-- http://wiki.flightgear.org/index.php/GPWS -->
+
+     <serviceable>true</serviceable>   <!-- EGPWS_ENABLE -->
+
+     <configuration-module>
+       <category-1>   255 </category-1>  <!-- AIRCRAFT_MODE_TYPE_SELECT -->
+       <category-3>   2 </category-3>  <!-- POSITION_INPUT_SELECT -->
+       <category-4>  13 </category-4>  <!-- ALTITUDE_CALLOUTS -->
+       <category-5>   0 </category-5>  <!-- AUDIO_MENU_SELECT -->
+       <category-6>   1 </category-6>  <!-- TERRAIN_DISPLAY_SELECT -->
+       <category-7> 124 </category-7>  <!-- OPTIONS_SELECT_GROUP_1 -->
+       <category-8>   3 </category-8>  <!-- RADIO_ALTITUDE_INPUT_SELECT -->
+       <category-9>   3 </category-9>  <!-- NAVIGATION_INPUT_SELECT -->
+       <category-10>  6 </category-10> <!-- ATTITUDE_INPUT_SELECT -->
+       <category-13>  7 </category-13> <!-- INPUT_OUTPUT_DISCRETE_TYPE_SELECT -->
+       <category-14>  0 </category-14> <!-- AUDIO_OUTPUT_LEVEL -->
+     </configuration-module>
+
+     <inputs>                          <!-- Module I/O -->
+       <arinc429>
+         <decision-height-ncd> false </decision-height-ncd>
+         <decision-height> 250 </decision-height>
+       </arinc429>
+     </inputs>
+
+     <speaker>                         <!-- Speaker Configuration -->
+       <max-dist> 2 </max-dist>        <!-- Max. distance where speaker is heard -->
+       <reference-dist> 1 </reference-dist> <!-- Distance to pilot -->
+       <volume> 2 </volume>          <!-- Volume at reference distance -->
+     </speaker>
+
+     <voice>
+         <file-prefix type="string">Aircraft/A310/Sounds/mk-viii/</file-prefix>
+                                         <!-- sound file path and prefix -->
+     </voice>
+
+   </mk-viii>
+	</instrumentation>
 
 <nasal>
   <A310> 
     <file>Aircraft/A310/Nasal/liveries.nas</file>
     <file>Aircraft/A310/Nasal/electrical.nas</file>
-	<file>Aircraft/A310/Nasal/systems.nas</file>
+    <file>Aircraft/A310/Nasal/systems.nas</file>
+    <file>Aircraft/A310/Nasal/autoflight.nas</file>
+    <file>Aircraft/A310/Nasal/autoflight-logic.nas</file>
 	<file>Aircraft/A310/Models/Interior/FlightDeck/Panel/Instruments/ND/ND.nas</file>
   </A310>
 		<reversethrust>

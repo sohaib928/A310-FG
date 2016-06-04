@@ -20,10 +20,9 @@
     <object-name>Face</object-name>
     <object-name>needle</object-name>
     <emission>
-      <factor-prop>/systems/electrical/outputs/eng-lights</factor-prop>
       <red>   1.0 </red>
-      <green> 0.4 </green>
-      <blue>  0.2 </blue>
+      <green> 1.0 </green>
+      <blue>  1.0 </blue>
     </emission>
   </animation>
 
@@ -50,7 +49,7 @@
     <property>/engines/engine[0]/n1</property>
     <interpolation>
       <entry><ind>  0 </ind><dep>   0 </dep></entry>
-      <entry><ind> 80 </ind><dep> 236 </dep></entry>
+      <entry><ind> 120 </ind><dep> 236 </dep></entry>
     </interpolation>
     <axis>
       <x> -1 </x>
