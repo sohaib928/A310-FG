@@ -333,7 +333,7 @@
 	<property>gear/gear[1]/compression-ft</property>
     <interpolation>
       <entry><ind>0</ind><dep>20</dep></entry>
-      <entry><ind>0.11</ind><dep>0</dep></entry>
+      <entry><ind>0.105</ind><dep>0</dep></entry>
     </interpolation>
 	<center>
 		<x-m>1.03694</x-m>
@@ -354,7 +354,7 @@
 	<property>gear/gear[2]/compression-ft</property>
     <interpolation>
       <entry><ind>0</ind><dep>20</dep></entry>
-      <entry><ind>0.11</ind><dep>0</dep></entry>
+      <entry><ind>0.105</ind><dep>0</dep></entry>
     </interpolation>
 	<center>
 		<x-m>1.03694</x-m>

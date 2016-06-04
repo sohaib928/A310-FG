@@ -100,6 +100,17 @@ Just some quick fixes by Jabberwocky to make it easier flyable, in the hope, it 
 
   </instrumentation>
   
+        <multiplay>
+            <generic>
+                <float n="0" alias="/gear/gear[0]/compression-m"/>
+                <float n="1" alias="/gear/gear[1]/compression-m"/>
+                <float n="2" alias="/gear/gear[2]/compression-m"/>
+                <float n="5" alias="/surface-positions/speedbrake-norm"/>
+                <float n="6" alias="/surface-positions/reverser-norm"/>
+                <string  alias="/sim/multiplay/callsign"/>
+            </generic>
+        </multiplay>
+  
         <flight-recorder include="Systems/flight-recorder.xml"/>
   
   <menubar>
