@@ -256,6 +256,12 @@
 				<property>autopilot/locks/at-mode</property>
 				<value>0</value>
 				</binding>
+				<binding>
+				<command>nasal</command>
+				if (getprop("controls/switches/at") == 1) {
+					setprop("/autopilot/locks/speed", "speed-with-throttle");
+				}
+				</binding>
 			</button>
 
 			<input>
@@ -282,6 +288,12 @@
 				<command>property-assign</command>
 				<property>autopilot/locks/at-mode</property>
 				<value>1</value>
+				</binding>
+				<binding>
+				<command>nasal</command>
+				if (getprop("controls/switches/at") == 1) {
+					setprop("/autopilot/locks/speed", "mach-with-throttle");
+				}
 				</binding>
 			</button>
 			
