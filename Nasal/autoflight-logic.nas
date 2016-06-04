@@ -111,9 +111,9 @@ setlistener("/controls/switches/apvertset", func {
   var vertm = getprop("/controls/switches/apvertset");
   if (ap) {
 	if (vertm == 1) {
-#     altcaptt.start();
+      altcaptt.start();
     } else {
-#	  altcaptt.stop();
+	  altcaptt.stop();
     }
   }
 });
