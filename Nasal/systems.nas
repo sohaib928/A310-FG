@@ -4,7 +4,7 @@ setlistener("/sim/signals/fdm-initialized", func {
   ap_init();
   setprop("/autopilot/locks/at-mode", 0);
   setprop("/controls/switches/at", 0);
-  var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Aircraft/MD-88/Systems/autopilot-dlg.xml");
+  var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Aircraft/A310/Systems/autopilot-dlg.xml");
   print("SYSTEMS ... FINE!");
 });
 
