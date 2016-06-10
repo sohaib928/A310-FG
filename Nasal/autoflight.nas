@@ -1,4 +1,5 @@
-# A310 AutoFlight system by Joshua Davidson (it0uchpods/411).
+# IT AUTOFLIGHT Subsystem by Joshua Davidson (it0uchpods/411).
+# V2.6.1
 
 var ap_init = func {
 	ap_logic_init();
@@ -9,6 +10,8 @@ var ap_init = func {
 	setprop("/autopilot/settings/heading-bug-deg", 360);
 	setprop("/autopilot/settings/target-altitude-ft", 10000);
 	setprop("/autopilot/settings/vertical-speed-fpm", 0);
+	setprop("/controls/switches/at", 0);
+	setprop("/autopilot/locks/at-mode", 0);
 	update_arms();
 	ap_refresh();
 	print("AUTOFLIGHT ... FINE!");

@@ -1,4 +1,5 @@
-# A310 AutoFlight control logic by Joshua Davidson (it0uchpods/411).
+# IT AUTOFLIGHT Logic by Joshua Davidson (it0uchpods/411).
+# V2.1.1
 
 var ap_logic_init = func {
 	setprop("/controls/switches/ap_master", 0);
@@ -14,6 +15,7 @@ var ap_logic_init = func {
 	setprop("/controls/switches/aphldtrk", 0);
 	setprop("/controls/switches/apvertmode", 3);
 	setprop("/controls/switches/aphldtrk2", 0);
+	setprop("/controls/switches/apoffsound", 1);
 	print("AUTOFLIGHT LOGIC ... FINE!");
 }
 
