@@ -102,6 +102,16 @@ Sounds: Taken from A300, modified by Airbus330
 	    <script>aircraft.livery.dialog.open()</script>
 	  </binding>
 	</item>
+        <item>
+    <label>System Failures</label>
+    <binding>
+      <command>nasal</command>
+      <script>
+       var failures = gui.Dialog.new("sim/gui/dialogs/failures/dialog", "Aircraft/A310/Systems/failures-dlg.xml");
+       failures.open();
+     </script>
+   </binding>
+     </item>
       </menu>
     </default>
   </menubar>

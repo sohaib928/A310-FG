@@ -60,6 +60,47 @@
     <max-dist>30.0</max-dist>
   </engine>
 
+	<engine>
+			<name>low l out</name>
+			<mode>looped</mode>
+			<path>Aircraft/A310/Sounds/xlow.wav</path>
+			<property>engines/engine[0]/n1</property>
+			<condition>
+				<not><property>sim/current-view/internal</property></not>
+			</condition>
+			<volume>
+				<property>engines/engine[0]/n1</property>
+				<factor>0.044</factor>
+				<max>1</max>
+			</volume>
+			<pitch>
+				<property>engines/engine[0]/n1</property>
+				<offset>0</offset>
+				<factor>0.02</factor>
+				<max>2</max>
+			</pitch>
+		</engine>
+		
+		<engine>
+			<name>low r out</name>
+			<mode>looped</mode>
+			<path>Aircraft/A310/Sounds/xlow.wav</path>
+			<property>engines/engine[1]/n1</property>
+			<condition>
+				<not><property>sim/current-view/internal</property></not>
+			</condition>
+			<volume>
+				<property>engines/engine[1]/n1</property>
+				<factor>0.044</factor>
+				<max>1</max>
+			</volume>
+			<pitch>
+				<property>engines/engine[1]/n1</property>
+				<offset>0</offset>
+				<factor>0.02</factor>
+				<max>2</max>
+			</pitch>
+		</engine>
 
 
   <engine>
@@ -137,6 +178,31 @@
     </volume>
   </rumble>
 
+ <rain>
+    	<name>rain</name>
+    	<mode>looped</mode>
+    	<path>Aircraft/A310/Sounds/rain.wav</path>
+    	<condition>
+    		<greater-than>
+    			<property>/environment/rain-norm</property>
+    			<value>0.2</value>
+    		</greater-than>
+    	</condition>
+    	<volume>
+    		<property>/environment/rain-norm</property>
+    		<factor>1.00</factor>
+    		<offset>0.00</offset>
+    		<min>0.4</min>
+    		<max>0.9</max>
+    	</volume>
+    	<pitch>
+    		<property>/velocities/airspeed-kt</property>
+    		<factor>0.001</factor>
+    		<offset>1.0</offset>
+    	</pitch>
+    </rain>
+
+
   <gear>
     <name>gear</name>
     <mode>in-transit</mode>
@@ -148,60 +214,105 @@
       <factor>-0.001</factor>
     </pitch>
   </gear>
+ 
+       <gearwarn>
+		<name>Gear warning</name>
+		<path>/Aircraft/A310/Sounds/gearwarn.wav</path>
+		<mode>looped</mode>
+		<type>avionics</type>
+		<condition>
+			<less-than-equals>
+				<property>position/altitude-agl-ft</property>
+				<value>400</value>
+			</less-than-equals>
+			<less-than-equals>
+				<property>/velocities/vertical-speed-fps</property>
+				<value>-1</value>
+			</less-than-equals>
+			<not>
+				<property>/controls/gear/gear-down</property>
+			</not>
+		</condition>
+		<volume>
+			<property>sim/sound/effects/volume</property>
+		</volume>
+		<reference-dist>10</reference-dist>
+		<max-dist>100</max-dist>
+	</gearwarn>
 
-  <gear>
-    <name>gear-lock</name>
-    <path>Aircraft/A310/Sounds/gear-lck.wav</path>
-    <condition>
-      <equals>
-	<property>/gear/gear[0]/position-norm</property>
-	<value>0</value>
-      </equals>
-    </condition>
-  </gear>
-  <!-- 
-  <gear>
-    <name>gear-horn</name>
-    <path>Aircraft/A310/Sounds/gear-hrn.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <equals>
-	<property>/gear/gear[0]/position-norm</property>
-	<value>0</value>
-      </equals>
-    </condition>      
-  </gear>
-  -->
-
-  <squeal>
-    <name>squeal</name>
-    <path>Aircraft/A310/Sounds/squeal.wav</path>
-    <condition>
-      <or>
-	<property>/gear/gear[0]/wow</property>
-	<property>/gear/gear[1]/wow</property>
-	<property>/gear/gear[2]/wow</property>
-      </or>
-    </condition>
-    <volume>
-      <property>/velocities/speed-down-fps</property>
-      <factor>0.05</factor>
-    </volume>
-    <volume>
-      <property>/velocities/airspeed-kt</property>
-      <factor>0.01</factor>
-    </volume>
-    <volume>
-      <internal>dt_stop</internal>
-      <factor>0.05</factor>
-      <max>1.0</max>
-    </volume>
-    <pitch>
-      <property>/velocities/airspeed-kt</property>
-      <factor>0.0025</factor>
-      <offset>1.2</offset>
-    </pitch>
-  </squeal>
+   <wow>
+    	<name>wow 0</name>
+    	<mode>once</mode>
+    	<path>Aircraft/A310/Sounds/wow.wav</path>
+    	<condition>
+    		<property>gear/gear[0]/wow</property>
+    	</condition>
+    	<volume>
+    		<property>sim/current-view/internal</property>
+    		<offset>0</offset>
+    	</volume>
+    </wow>
+    <wow>
+    	<name>wow 1</name>
+    	<mode>once</mode>
+    	<path>Aircraft/A310/Sounds/wow.wav</path>
+    	<condition>
+    		<property>gear/gear[1]/wow</property>
+    	</condition>
+    	<volume>
+    		<property>sim/current-view/internal</property>
+    		<offset>0</offset>
+    	</volume>
+    </wow>
+    <wow>
+    	<name>wow 2</name>
+    	<mode>once</mode>
+    	<path>Aircraft/A310/Sounds/wow.wav</path>
+    	<condition>
+    		<property>gear/gear[2]/wow</property>
+    	</condition>
+    	<volume>
+    		<property>sim/current-view/internal</property>
+    		<offset>0</offset>
+    	</volume>
+    </wow>
+    
+    <wow>
+    	<name>wow 3</name>
+    	<mode>once</mode>
+    	<path>Aircraft/A310/Sounds/wow.wav</path>
+    	<condition>
+    		<property>gears/gear[0]/wow</property>
+    	</condition>
+    	<volume>
+    		<property>sim/current-view/internal</property>
+    		<offset>0</offset>
+    	</volume>
+    </wow>
+    <wow>
+    	<name>wow 4</name>
+    	<mode>once</mode>
+    	<path>Aircraft/A310/Sounds/wow.wav</path>
+    	<condition>
+    		<property>gears/gear[1]/wow</property>
+    	</condition>
+    	<volume>
+    		<property>sim/current-view/internal</property>
+    		<offset>0</offset>
+    	</volume>
+    </wow>
+    <wow>
+    	<name>wow 5</name>
+    	<mode>once</mode>
+    	<path>Aircraft/A310/Sounds/wow.wav</path>
+    	<condition>
+    		<property>gears/gear[2]/wow</property>
+    	</condition>
+    	<volume>
+    		<property>sim/current-view/internal</property>
+    		<offset>0</offset>
+    	</volume>
+    </wow>
   
   <flap>
     <name>flaps</name>
@@ -238,69 +349,52 @@
     </pitch>
   </wind>
 
-  <overspeed>
-    <name>overspeed</name>
-    <mode>looped</mode>
-    <path>Aircraft/A310/Sounds/overspeed2.wav</path>
-    <condition>
-      <greater-than>
-	<property>velocities/airspeed-kt</property>
-	<value>340</value>
-      </greater-than>
-      <equals>
-	<property>sim/current-view/view-number</property>
-	<value>0</value>
-      </equals>
-    </condition>
-    <volume>
-      <factor>1.0</factor>
-    </volume>
-    <pitch>
-      <factor>0.1</factor>
-    </pitch>
-    <reference-dist>1.0</reference-dist>
-    <max-dist>2.0</max-dist>
-  </overspeed>
-  
-  <stall>
-    <name>stall</name>
-    <mode>looped</mode>
-    <path>/Aircraft/A310/Sounds/stall.wav</path>
-    <condition>
-      <less-than>
-        <property>velocities/airspeed-kt</property>
-        <value>140</value>
-      </less-than>
-      <not>
-        <property>/gear/gear[0]/wow</property>
-        <property>/gear/gear[1]/wow</property>
-        <property>/gear/gear[2]/wow</property>
-        <property>/surface-positions/flap-pos-norm</property>
-        <property>/gear/gear[0]/position-norm</property>
-      </not>
-      <less-than>
-        <property>surface-positions/flap-pos-norm</property>
-        <value>.01</value>
-      </less-than>
-    </condition>
-    <volume>
-      <max>1.0</max>
-    </volume>
-    <position>
-      <x>-23</x>
-      <y>0</y>
-      <z>1</z>
-    </position>
-    <reference-dist>1.0</reference-dist>
-    <max-dist>2.0</max-dist>
-  </stall>
+                 <overspeed>
+			<name>Overspeed warning</name>
+			<path>Aircraft/A310/Sounds/overspeed2.wav</path>
+			<mode>looped</mode>
+			<condition>
+				<greater-than>
+					<property>velocities/airspeed-kt</property>
+					<value>345</value>
+				</greater-than>
+			</condition>
+			<volume>
+				<factor>1.0</factor>
+			</volume>
+		</overspeed>  
 
-  <!-- no binding yet?
-  <click>
-    <name>click</name>
-    <path>Aircraft/A310/Sounds/click.wav</path>
-  </click>
-  -->
+                 <stall>
+			<name>stall</name>
+			<mode>looped</mode>
+			<path>/Aircraft/A310/Sounds/stall.wav</path>
+			<type>avionics</type>
+			<condition>
+				<property>warnings/stall/active</property>
+			</condition>
+			<volume>
+				<property>sim/sound/effects/volume</property>
+			</volume>
+			
+			<reference-dist>10</reference-dist>
+			<max-dist>100.0</max-dist>
+		</stall>
+		
+  <nosmoke>
+    	<name>no smoking sign</name>
+    	<path>Aircraft/A310/Sounds/cabinalert.wav</path>
+    	<mode>once</mode>
+    	<condition>
+    		<property>sim/sound/no-smoking-sign</property>
+    	</condition>
+    	<volume>
+    		<offset>1</offset>
+    	</volume>
+    	<reference-dist>10.0</reference-dist>
+    	<max-dist>100.0</max-dist>
+    </nosmoke>
+    
+
 
   <!-- Cockpit GPWS -->
   <altitude1>
