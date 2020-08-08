@@ -470,9 +470,9 @@
   <model>
     <path>Aircraft/A310/Models/Interior/FlightDeck/Panel/Instruments/empty/empty2/empty2.xml</path>
     <offsets>
-      <x-m> -0.015 </x-m>
-      <y-m> -0.222 </y-m>
-      <z-m> -0.079 </z-m>
+  	<x-m> -0.015 </x-m>
+     	<y-m> -0.128 </y-m>
+     	<z-m>0.0206</z-m>
       <pitch-deg> -6 </pitch-deg>
     </offsets>
   </model>
