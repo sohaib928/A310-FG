@@ -114,6 +114,41 @@
       <z2-m>  1.259 </z2-m>
     </axis>
   </animation> 
+
+    <!--tiller-->
+  <animation>
+		<type>rotate</type>
+		<object-name>tiller</object-name>
+		<property>gear/gear/steering-norm</property>
+		<factor>-70</factor>
+		<center>
+			<x-m>-0.446</x-m>
+			<y-m>-1.212</y-m>
+			<z-m>-0.421</z-m>
+		</center>
+		<axis>
+			<x>0</x> 
+			<y>0</y> 
+			<z>1</z> 
+		</axis>
+	</animation>
+
+    <animation>
+		<type>rotate</type>
+		<object-name>tiller-fo</object-name>
+		<property>gear/gear/steering-norm</property>
+		<factor>-70</factor>
+		<center>
+			<x-m>-0.466</x-m>
+			<y-m>-1.193</y-m>
+			<z-m>0.428</z-m>
+		</center>
+		<axis>
+			<x>0</x> 
+			<y>0</y> 
+			<z>-1</z> 
+		</axis>
+	</animation>
   
   <!-- Panel -->
   <model>
