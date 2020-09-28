@@ -12,7 +12,7 @@ Just some quick fixes by Jabberwocky to make it easier flyable, in the hope, it 
 <PropertyList>
 
 	<sim>
-		<description>Airbus A310</description>
+		<description>Airbus A310-300</description>
 		<aircraft-version>0.13</aircraft-version>
 		<status>alpha</status>
 
